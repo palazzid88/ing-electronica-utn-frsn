@@ -16,7 +16,7 @@ function renderizarImg(img) {
     div.className = "div-flex"
     let {img, description} = item;
 
-    div.innerHTML = `<div class="card" style="width: 18rem;">
+    div.innerHTML = `<div class="card" style="width: 18rem; align-items: center">
                         <img src="${img}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">${description}</p>
