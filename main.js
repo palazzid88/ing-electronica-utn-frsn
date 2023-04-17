@@ -1,11 +1,29 @@
 
 
 let contenedor = document.getElementById('container-img')
+let error = document.getElementById('container-err')
 let initialCount = 0
+let condition = true
+let intervalFetch;
 
-let intervalFetch = setInterval(()=> {llamadoAlFetch()}, 1000);
+reading();
 
-// llamadoAlFetch();  llama a las img para renderizarlas en ()=>renderizar Img
+function reading() {
+    if(condition) {
+        intervalFetch = setInterval(()=> {llamadoAlFetch()}, 1000);
+        // llamadoAlFetch();
+        console.log("se llama al fetch");
+    }
+    else
+    {
+        clearInterval(intervalFetch)
+        console.log("finaliza fetch");
+    
+}
+}
+
+
+// llama a las img para renderizarlas en ()=>renderizar Img
 
 
 
@@ -17,21 +35,31 @@ function renderizarImg(img) {
     let {img, description} = item;
 
     div.innerHTML = `<div class="card" style="width: 18rem; align-items: center">
-                        <img src="${img}" class="card-img-top" alt="...">
+                        <img src="${img}" class="card-img-top" alt="imágen de botella defectuosa">
                         <div class="card-body">
                             <p class="card-text">${description}</p>
                         </div>
                     </div>`
 
 contenedor.appendChild(div)
-}),
+})}
 
 
-function count (initialCount) {
-    initialCount +=
-    console.log(initialCount);
+
+function renderizarError(error) {
+    console.log("llamo a renderizar error");
+    error.innerHTML = "";
+    let div = document.createElement('div');
+    div.className = "div-err"
+
+    div.innerHTML = `<div class="err">
+                        <h1 class="h1-err">error de conexión</h1>
+                        <img src="./img/warning.jpg" class="img-err" alt="imágen de error"
+                    </div>`
+
+contenedor.appendChild(div)
 }
-}
+
 
 function llamadoAlFetch () {
     fetch("myImages.json") //=> ubicacion de stock img en json
@@ -39,10 +67,14 @@ function llamadoAlFetch () {
     .then(data=>{
         console.log(data, "promesa")
         renderizarImg(data)
-        // setInterval(()=> {renderizarImg(data)}, 5000);
-        // renderizarImg(data);
+
     })
-    .catch(console.log("error en la promesa"));
+    .catch( error => {
+        condition = false;
+        reading();
+        renderizarError(error);
+        console.log("error en la promesa")
+    });
 }
 
 
@@ -53,7 +85,9 @@ let stopButton = document.getElementById('stop-btn');
 
 stopButton.addEventListener('click', ()=> {
     // Detener el intervalo usando el ID guardado en la variable
-    clearInterval(intervalFetch);
+    condition = false
+    console.log(condition, "condition stop");
+    reading();
   });
 
 
@@ -63,4 +97,8 @@ let startButton = document.getElementById('cont-btn');
 
 startButton.addEventListener('click', ()=> {
     // Continuar el intervalo usando el ID guardado en la variable
-    setInterval(()=> {llamadoAlFetch()}, 1000)})
+    // setInterval(()=> {llamadoAlFetch()}, 1000)
+    condition = true
+    console.log(condition, "start");
+    reading();
+})
