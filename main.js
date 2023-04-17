@@ -53,7 +53,7 @@ function renderizarError(error) {
     div.className = "div-err"
 
     div.innerHTML = `<div class="err">
-                        <h1 class="h1-err">error de conexión</h1>
+                        <h2 class="h1-err">error de conexión</h2>
                         <img src="./img/warning.jpg" class="img-err" alt="imágen de error"
                     </div>`
 
