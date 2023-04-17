@@ -6,7 +6,7 @@ body {
     /* color: white; */
 }
 
-.navbar {
+.header-nav {
     /* margin: 10px; */
     padding: 10px;
     background: rgb(2,0,36);
@@ -16,7 +16,8 @@ body {
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -28,6 +29,7 @@ body {
 .title-nav {
     color: white;
     text-align: center;
+    margin: 10px;
 }
 
 .div-info {
@@ -46,6 +48,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .div-flex {
@@ -120,4 +123,8 @@ body {
 .img-line {
     margin: 10px;
     width: 300px;
+}
+
+.img-footer{
+width: 100%;
 }
