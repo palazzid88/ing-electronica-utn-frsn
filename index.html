@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Proyecto final "Ingeniería Electrónica</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img src="./img/logo.png" alt="logo de coca cola" class="nav-logo">
+            <img src="./img/utn-logo.png" alt="logo de coca cola" class="nav-logo">
             <h1 class="title-nav">Control de calidad de linea de producción</h1>
         </nav>
     </header>
     <main>
         <div class="div-info">
-            <h1 class="">Botellas defectuosas</h1>
-            <button type="button" class="button">Detener</button>
+            <h1 class="div-h1">Histórico botellas defectuosas</h1>
+            <div class="div-btn">
+                <button type="button" class="button1" id="stop-btn">Detener</button>
+                <button type="button" class="button2" id="cont-btn">Continuar</button>
+            </div>
+
         </div>
         <div class="div-flex-container" id="container-img">
             <!-- <picture class="picture-img"> -->
@@ -27,5 +38,7 @@
         </div>
     </main>
 <script src="./main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>
 </html>

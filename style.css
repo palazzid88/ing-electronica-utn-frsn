@@ -1,14 +1,18 @@
 body {
     margin: 0%;
     padding: 0%;
-    background-image: url("./img/body.jpg");
+    font-family: 'Roboto', sans-serif;
+    /* background-image: url("./img/body.jpg"); */
     /* color: white; */
 }
 
 .navbar {
     /* margin: 10px; */
     padding: 10px;
-    background-color: #991821;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 92%);
+    /* background-color: #1B2CC1; */
+    /* background-image: url("./img/banner-utn.png"); */
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
@@ -18,19 +22,20 @@ body {
 
 .nav-logo {
     width: 100px;
-    margin-right: 25px;
+    /* margin-right: 25px; */
 }
 
 .title-nav {
     color: white;
+    text-align: center;
 }
 
 .div-info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: white;
+    justify-content: center;
+    /* background-color:#00d4ff; */
     align-items: center;
     margin: 10px;
     padding: 10px;
@@ -51,25 +56,65 @@ body {
     align-items: center;
 }
 
-.picture-img {
-    display: flex;
-    justify-content: center;
+.card-img {
     align-items: center;
 
 }
 
 .div-h1 {
+    display: flex;
+    align-items: center;
     margin: 10px;
     padding: 10px;
+    text-align: center;
+
 }
 
-.button {
-    background-color: #AD272E;
+.div-btn {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.button1 {
+    background-color: #bf0603;
     color: white;
-    width: 70px;
-    height: 30px;
-    border-radius: 10%;
+    width: 80px;
+    height: 40px;
+    border: 2px solid #bf0603;
+    border-radius: 10px;
     border-color: white;
+    margin: 10px;
+}
+
+.button1:hover {
+        background-color: white;
+        color: #bf0603; 
+        border-color: #bf0603;
+
+}
+
+.button2 {
+    background-color: #2DC653;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border: 2px solid #0099CC;
+    border-radius: 10px;
+    border-color: white;;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border: 2px solid #0099CC;
+    border-radius: 10px;
+    border-color: white;
+    margin: 10px;
+}
+
+.button2:hover {
+    background-color: white;
+    color: green; 
+    border-color: #2DC653;
 }
 
 .img-line {
