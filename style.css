@@ -79,36 +79,42 @@ body {
 .button1 {
     background-color: #bf0603;
     color: white;
-    width: 80px;
+    width: 100px;
+    text-align: center;
     height: 40px;
     border: 2px solid #bf0603;
     border-radius: 10px;
     border-color: white;
     margin: 10px;
+    transition: border 1s;
 }
 
 .button1:hover {
         background-color: white;
         color: #bf0603; 
         border-color: #bf0603;
+        transition: border 1s;
+
 
 }
 
 .button2 {
     background-color: #2DC653;
     color: white;
-    width: 80px;
+    width: 100px;
+    text-align: center;
     height: 40px;
     border: 2px solid #0099CC;
     border-radius: 10px;
     border-color: white;;
     color: white;
-    width: 80px;
     height: 40px;
     border: 2px solid #0099CC;
     border-radius: 10px;
     border-color: white;
     margin: 10px;
+    transition: border 1s;
+
 }
 
 .button2:hover {
@@ -148,4 +154,102 @@ body {
 
 .img-footer{
 width: 100%;
+}
+
+
+
+
+/*################################################*/
+/* historico.html */
+
+.div-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #cad2c5;
+}
+
+.div-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.link1 {
+    text-align: center;
+    width: 80px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    background-color: #d62828;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: border 1s;
+
+}
+
+.link1:hover {
+    background-color: white;
+    color: #d62828;
+    border-color: #d62828;
+    transition: border 1s;
+}
+
+.link2 {
+    text-align: center;
+    width: 80px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f77f00;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: border 1s;
+
+}
+
+.link2:hover {
+    background-color: white;
+    color: #f77f00;
+    border-color: #f77f00;
+    transition: border 1s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.data-img {
+    width: 350px;
+    border-bottom: 1px solid #cad2c5;
+}
+
+.img-flex {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+.h5-subtitle {
+    text-align: center;
+}
+
+.p-footer {
+    text-align: center;
 }
